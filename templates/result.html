@@ -2,33 +2,23 @@
 <html>
 
 <head>
-
     <title>CareerAI - Analysis</title>
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='style.css') }}">
-
 </head>
 
 <body>
 
 <nav>
-
     <a href="/">CareerAI</a>
-
     <a href="/history">Analysis History</a>
-
 </nav>
-
 
 <div class="container">
 
     <h1>CareerAI</h1>
-
     <h2>Resume Analysis</h2>
-
-
-    <!-- Job Title -->
 
     <div class="card">
 
@@ -38,8 +28,6 @@
 
     </div>
 
-
-    <!-- Match Score -->
 
     <div class="card">
 
@@ -59,8 +47,6 @@
 
     </div>
 
-
-    <!-- Skills Summary -->
 
     <div class="card">
 
@@ -111,8 +97,6 @@
     </div>
 
 
-    <!-- Matched Skills -->
-
     <div class="card">
 
         <h3>Matched Skills</h3>
@@ -136,8 +120,6 @@
     </div>
 
 
-    <!-- Missing Skills -->
-
     <div class="card">
 
         <h3>Missing Skills</h3>
@@ -160,8 +142,6 @@
 
     </div>
 
-
-    <!-- Recommendations -->
 
     <div class="card">
 
@@ -188,39 +168,16 @@
     </div>
 
 
-    <!-- Download Report -->
-
-    <div class="card">
-
-        <h3>Download Report</h3>
-
-        <a href="/download?job_title={{ job_title }}&match_score={{ match_score }}&matched_skills={{ matched_skills|join(', ') }}&missing_skills={{ missing_skills|join(', ') }}">
-
-            <button type="button">
-                Download Analysis Report
-            </button>
-
-        </a>
-
-    </div>
-
-
-    <!-- Job Description -->
-
     <div class="card">
 
         <h3>Job Description</h3>
 
         <div class="job-description">
-
             {{ job_description }}
-
         </div>
 
     </div>
 
-
-    <!-- Back Button -->
 
     <div class="card">
 
@@ -231,7 +188,6 @@
         </a>
 
     </div>
-
 
 </div>
 
