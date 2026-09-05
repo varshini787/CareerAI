@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CareerAI - Resume Analyzer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <a href="/">CareerAI</a>
+    <a href="/history">Analysis History</a>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>CareerAI</h1>
+
+        <h2>AI-Powered Resume & Job Matching</h2>
+
+        <p class="intro">
+            Upload your resume and compare it with a job description
+            to identify matching skills, missing skills and career
+            improvement opportunities.
+        </p>
+
+        <form action="/upload"
+              method="POST"
+              enctype="multipart/form-data">
+
+            <label>
+                <strong>Upload Resume</strong>
+            </label>
+
+            <input type="file"
+                   name="resume"
+                   accept=".pdf"
+                   required>
+
+            <label>
+                <strong>Job Title</strong>
+            </label>
+
+            <input type="text"
+                   name="job_title"
+                   placeholder="Example: Software Engineer"
+                   required>
+
+            <label>
+                <strong>Job Description</strong>
+            </label>
+
+            <textarea name="job_description"
+                      placeholder="Paste the job description here..."
+                      required></textarea>
+
+            <button type="submit">
+                Analyze Resume
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

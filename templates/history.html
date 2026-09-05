@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CareerAI - History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/history">Analysis History</a>
+</nav>
+
+<div class="container">
+
+    <h1>CareerAI</h1>
+    <h2>Analysis History</h2>
+
+    {% if analyses %}
+
+        {% for analysis in analyses %}
+
+        <div class="card">
+
+            <h3>{{ analysis[1] }}</h3>
+
+            <p class="score">
+                Match Score: {{ analysis[3] }}%
+            </p>
+
+            <p>
+                <strong>Matched Skills:</strong>
+                {{ analysis[4] }}
+            </p>
+
+            <p>
+                <strong>Missing Skills:</strong>
+                {{ analysis[5] }}
+            </p>
+
+            <p>
+                <strong>Date:</strong>
+                {{ analysis[6] }}
+            </p>
+
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <p>No analysis history available.</p>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
